@@ -1,11 +1,11 @@
 body {
   background: black;
-  color: white;
+  color: rgb(236, 233, 233);
 }
 
 
-.movie-app>.row {
-  overflow-x: auto;
+.movie-app > .row {
+  /* overflow-x: auto; */
   flex-wrap: nowrap;
 
 }
