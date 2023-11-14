@@ -1,5 +1,5 @@
 import React from 'react';
-import App from '../App';
+// import App from '../App';
 
 
 const MovieList = (props) => {
@@ -7,17 +7,16 @@ const MovieList = (props) => {
 
     return (
         <>
-        
-        
+
             {props.movies.map((movie, index) => (
                 <div className='image-container d-flex justify-content-start m-3'>
                     <img src={movie.Poster} alt='movie posters'></img>
-                    <p>{movie.Title}</p>
+                    <div onClick={props.handleFavouritesClick} className='overlay d-flex align-items-center justify-content-center'></div>
+                    
                     <div
-                        onClick={() => props.handleFavouritesClick(movie)}
-                        className='overlay d-flex align-items-center justify-content-center'
-                    >
-                        {/* <FavouriteComponent /> */}
+                        onClick={()=>props.handleFavouritesClick(movie)}
+                        className='overlay d-flex align-items-center justify-content-center'>
+                        <FavouriteComponent />
                     </div>
                 </div>
             ))}
